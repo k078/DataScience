@@ -1,9 +1,17 @@
 digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
 edge [fontname=helvetica] ;
-0 [label=<body_mass_g &le; 4475.0<br/>gini = 0.637<br/>samples = 100<br/>value = [44, 20, 36]<br/>class = Adelie>, fillcolor="#fcefe6"] ;
-1 [label=<gini = 0.493<br/>samples = 65<br/>value = [42, 19, 4]<br/>class = Adelie>, fillcolor="#f2c09c"] ;
+0 [label=<tar &le; 7.5<br/>mse = 0.054<br/>samples = 634<br/>value = 0.696>, fillcolor="#f1bd98"] ;
+1 [label=<tar &le; 4.5<br/>mse = 0.014<br/>samples = 139<br/>value = 0.376>, fillcolor="#fcf1e9"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label=<gini = 0.16<br/>samples = 35<br/>value = [2, 1, 32]<br/>class = Gentoo>, fillcolor="#8c4be7"] ;
-0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+2 [label=<mse = 0.005<br/>samples = 75<br/>value = 0.287>, fillcolor="#ffffff"] ;
+1 -> 2 ;
+3 [label=<mse = 0.004<br/>samples = 64<br/>value = 0.48>, fillcolor="#f9e0ce"] ;
+1 -> 3 ;
+4 [label=<tar &le; 14.5<br/>mse = 0.028<br/>samples = 495<br/>value = 0.786>, fillcolor="#eeaf81"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<mse = 0.013<br/>samples = 433<br/>value = 0.745>, fillcolor="#f0b58b"] ;
+4 -> 5 ;
+6 [label=<mse = 0.04<br/>samples = 62<br/>value = 1.071>, fillcolor="#e58139"] ;
+4 -> 6 ;
 }
